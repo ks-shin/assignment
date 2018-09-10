@@ -1,6 +1,6 @@
 var request = require('request');
 var cheerio = require("cheerio");
-
+    
 var url = "https://www.naver.com";             
 var related_url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=" //연관검색어를검색하기위한 url
 
