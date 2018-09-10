@@ -14,11 +14,11 @@ async function getdata() {
     const posts_rank=$('.ah_item .ah_a .ah_r')
     posts.each((index, item)=>{   //실시간검색어(item)를 순위순서대로 list(임시배열) 에 넣습니다.
         list[index] = {};
-        const title = $(item).text()
+        const title = $(item).text();
         list[index].title = title;   
     });
     posts_rank.each((index, item)=>{ //실시간검색어의순위(rank)를  순서대로 list(임시배열) 에 넣습니다.
-        const rank = $(item).text()                           
+        const rank = $(item).text();                         
         list[index].rank = rank; 
     });
 }
