@@ -5,21 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+            <script src="js/jquery.js"></script>
+            
             <script>
-                document.write("hello","<br>");
-                var today = new Date();
-                var y = today.getFullYear();
-                var m = today.getMonth();
-                var d = today.getDate();
-                var day = today.getDay();
-
-                document.write(y,"<br>");
-                document.write(m,"<br>");
-                document.write(d,"<br>");
-                document.write(day,"<br>");
+                $(function(){
+                    $(".btn1").on("click",function(){
+                        var ts = $(this)
+                        if(ts.text()=="숨김"){
+                            $(".wrap").slideUp(1000,function(){
+                            $(".btn1").text("노출")
+                        })
+                        } else {
+                            $(".wrap").slideDown(1000,function(){
+                            $(".btn1").text("노출")
+                        })
+                        }
+                       
+                    })
+                    
+                
+                
+                })
             </script>
 </head>
 <body>
-    
+    <P class="btnWrap">
+        <button class="btn1">숨김</button>
+    </P>
+    <div class ="wrap">
+        <p class="txt1">내용1</p>
+        <p class="txt1">내용1</p>
+    </div>
 </body>
 </html>
